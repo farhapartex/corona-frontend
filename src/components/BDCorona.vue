@@ -5,7 +5,7 @@
     </div>
     <div class="container-fluid">
       <div class="row bd-update">
-        <div class="col col-md-3 col-lg-3 col-xl-3">
+        <div class="col col-md-3 col-sm-12 col-lg-3 col-xl-3">
           <div class="w-100 shadow pl-1 pr-1 pt-3 pb-3 mb-5 bg-white rounded">
             <div class="header pt-2 pb-1 mx-auto test-conduct">
               <h6 class="text-center">Test Conducted</h6>
@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-        <div class="col col-md-3 col-lg-3 col-xl-3">
+        <div class="col col-md-3 col-sm-12 col-lg-3 col-xl-3">
           <div class="w-100 shadow pl-1 pr-1 pt-3 pb-3 mb-5 bg-white rounded">
             <div class="header pt-2 pb-1 mx-auto positive-case">
               <h6 class="text-center">Positive Cases</h6>
@@ -43,7 +43,7 @@
             </div>
           </div>
         </div>
-        <div class="col col-md-3 col-lg-3 col-xl-3">
+        <div class="col col-md-3 col-sm-12 col-lg-3 col-xl-3">
           <div class="w-100 shadow pl-1 pr-1 pt-3 pb-3 mb-5 bg-white rounded">
             <div class="header pt-2 pb-1 mx-auto patient-died">
               <h6 class="text-center">Patient Died</h6>
@@ -62,7 +62,7 @@
             </div>
           </div>
         </div>
-        <div class="col col-md-3 col-lg-3 col-xl-3">
+        <div class="col col-md-3 col-sm-12 col-lg-3 col-xl-3">
           <div class="w-100 shadow pl-1 pr-1 pt-3 pb-3 mb-5 bg-white rounded">
             <div class="header pt-2 pb-1 mx-auto patient-recover">
               <h6 class="text-center">Patient Recover</h6>

@@ -1,0 +1,1 @@
+export const BD_CORONA_INFO: string = "bdCoronaInfo";

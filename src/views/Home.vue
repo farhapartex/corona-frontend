@@ -7,6 +7,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { Getter, Action } from "vuex-class";
 import Navigation from "../components/Navigation.vue";
 import BDCorona from "../components/BDCorona.vue";
 

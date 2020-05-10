@@ -14,11 +14,11 @@
               <div class="row mt-3">
                 <div class="col-md-6 col-lg-6">
                   <p class="text-center">Today Tested</p>
-                  <p class="text-center">5678</p>
+                  <p class="text-center">{{bdCoronaData[0].tested}}</p>
                 </div>
                 <div class="col-md-6 col-lg-6">
                   <p class="text-center">Total Tested</p>
-                  <p class="text-center">225678</p>
+                  <p class="text-center">{{bdCoronaData[0].total_tested}}</p>
                 </div>
               </div>
             </div>
@@ -33,11 +33,11 @@
               <div class="row mt-3">
                 <div class="col-md-6 col-lg-6">
                   <p class="text-center">Today Positive</p>
-                  <p class="text-center">5678</p>
+                  <p class="text-center">{{bdCoronaData[0].patient}}</p>
                 </div>
                 <div class="col-md-6 col-lg-6">
                   <p class="text-center">Total Positive</p>
-                  <p class="text-center">225678</p>
+                  <p class="text-center">{{bdCoronaData[0].total_patient}}</p>
                 </div>
               </div>
             </div>
@@ -52,11 +52,11 @@
               <div class="row mt-3">
                 <div class="col-md-6 col-lg-6">
                   <p class="text-center">Today Died</p>
-                  <p class="text-center">5678</p>
+                  <p class="text-center">{{bdCoronaData[0].died}}</p>
                 </div>
                 <div class="col-md-6 col-lg-6">
                   <p class="text-center">Total Died</p>
-                  <p class="text-center">225678</p>
+                  <p class="text-center">{{bdCoronaData[0].total_died}}</p>
                 </div>
               </div>
             </div>
@@ -72,11 +72,11 @@
               <div class="row mt-3">
                 <div class="col-md-6 col-lg-6">
                   <p class="text-center">Today Recovered</p>
-                  <p class="text-center">5678</p>
+                  <p class="text-center">{{bdCoronaData[0].recovered}}</p>
                 </div>
                 <div class="col-md-6 col-lg-6">
                   <p class="text-center">Total Recovered</p>
-                  <p class="text-center">225678</p>
+                  <p class="text-center">{{bdCoronaData[0].total_recovered}}</p>
                 </div>
               </div>
             </div>
@@ -93,7 +93,13 @@ import { Component, Prop, Vue } from "vue-property-decorator";
   name: "BDCorona",
   components: {}
 })
-export default class BDCorona extends Vue {}
+export default class BDCorona extends Vue {
+  @Prop() readonly bdCoronaData: any;
+
+  mounted() {
+    console.log(this.bdCoronaData);
+  }
+}
 </script>
 
 <style>

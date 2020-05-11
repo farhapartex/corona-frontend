@@ -2,6 +2,7 @@
   <div class="home">
     <Navigation></Navigation>
     <BDCorona :bdCoronaData="bdCoronaData"></BDCorona>
+    <WorldCorona :bdCoronaData="bdCoronaData"></WorldCorona>
   </div>
 </template>
 
@@ -10,11 +11,12 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 import { Getter, Action } from "vuex-class";
 import Navigation from "../components/Navigation.vue";
 import BDCorona from "../components/BDCorona.vue";
+import WorldCorona from "../components/WorldCoro.vue";
 import { BD_CORONA_INFO } from "../store/actions.names";
 
 @Component({
   name: "Base",
-  components: { Navigation, BDCorona }
+  components: { Navigation, BDCorona, WorldCorona }
 })
 export default class HomePage extends Vue {
   @Action(BD_CORONA_INFO) bdCoronaInfo: any;

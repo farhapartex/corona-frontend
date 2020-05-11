@@ -2,8 +2,8 @@ import { RootState, BDInfoState } from "../store.types";
 import { GetterTree, ActionTree, MutationTree, Module } from "vuex";
 import vue from "vue";
 import axios from "axios";
-import { BD_INFO_ENDPOINT } from '../endpoints.names';
-import { BD_CORONA_INFO } from '../actions.names';
+import { BD_INFO_ENDPOINT, GLOBAL_INFO_ENDPOINT } from '../endpoints.names';
+import { BD_CORONA_INFO, GLOBAL_CORONA_INFO } from '../actions.names';
 
 const DEFAULT_AUTH_STATE: BDInfoState = {
     token: null,
@@ -30,17 +30,30 @@ const actions: ActionTree<BDInfoState, RootState> = {
 
         });
     },
+    async [GLOBAL_CORONA_INFO]({ commit }): Promise<any> {
+        return new Promise((resolve, reject) => {
+            axios
+                .get(GLOBAL_INFO_ENDPOINT)
+                .then(({ data }) => {
+                    resolve(data);
+                })
+                .catch(e => {
+                    reject(e);
+                });
+
+        });
+    },
 }
 
 const mutations: MutationTree<BDInfoState> = {
 
 };
 
-const BDInfoStateModule: Module<BDInfoState, RootState> = {
+const CoronaInfoStateModule: Module<BDInfoState, RootState> = {
     state,
     getters,
     actions,
     mutations
 };
 
-export default BDInfoStateModule;
+export default CoronaInfoStateModule;

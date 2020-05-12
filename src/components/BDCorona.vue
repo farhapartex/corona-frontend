@@ -2,7 +2,7 @@
   <div class="w-100 mt-5 bd-corona">
     <div class="w-100 main-header d-flex flex-row" style="z-index:99999;">
       <h4 class="p-3">Bangladesh Corona Update</h4>
-      <!-- <datepicker></datepicker> -->
+      <date-picker v-model="bdDate" class="p-3"></date-picker>
       <div class="form-group p-3">
         <button class="btn btn-sm btn-secondary" @click="getDate">Search</button>
       </div>
@@ -94,18 +94,19 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import DatetimePicker from "vuetify-datetime-picker";
+import DatePicker from "vue2-datepicker";
+import "vue2-datepicker/index.css";
 
 @Component({
   name: "BDCorona",
-  components: { DatetimePicker }
+  components: { DatePicker }
 })
 export default class BDCorona extends Vue {
   @Prop() readonly bdCoronaData: any;
   bdDate: any = null;
 
   getDate() {
-    console.log(this.bdDate);
+    console.log(this.bdDate.toDateString());
   }
 
   mounted() {
